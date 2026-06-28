@@ -1,0 +1,59 @@
+---- Minecraft Crash Report ----
+
+WARNING: coremods are present:
+Contact their authors BEFORE contacting forge
+
+// Surprise! Haha. Well, this is awkward.
+
+Time: 5/31/26 3:55 AM
+Description: Exception in server tick loop
+
+Missing Mods:
+	unknown : need any: have missing
+
+net.minecraftforge.fml.common.MissingModsException: Mod reccomplex (Recurrent Complex) requires [ivtoolkit]
+	at net.minecraftforge.fml.common.Loader.sortModList(Loader.java:266)
+	at net.minecraftforge.fml.common.Loader.loadMods(Loader.java:572)
+	at net.minecraftforge.fml.server.FMLServerHandler.beginServerLoading(FMLServerHandler.java:98)
+	at net.minecraftforge.fml.common.FMLCommonHandler.onServerStart(FMLCommonHandler.java:333)
+	at net.minecraft.server.dedicated.DedicatedServer.func_71197_b(DedicatedServer.java:125)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:486)
+	at java.lang.Thread.run(Thread.java:750)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Linux (amd64) version 6.8.0-1052-azure
+	Java Version: 1.8.0_482, Private Build
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Private Build
+	Memory: 1994709088 bytes (1902 MB) / 2416967680 bytes (2305 MB) up to 11453595648 bytes (10923 MB)
+	JVM Flags: 2 total; -Xms2G -Xmx12G
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.42 Powered by Forge 14.23.5.2860 14 mods loaded, 14 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State | ID                | Version       | Source                              | Signature                                |
+	|:----- |:----------------- |:------------- |:----------------------------------- |:---------------------------------------- |
+	| L     | minecraft         | 1.12.2        | minecraft.jar                       | None                                     |
+	| L     | mcp               | 9.42          | minecraft.jar                       | None                                     |
+	| L     | FML               | 8.0.99.99     | forge-1.12.2-14.23.5.2860.jar       | e3c3d50c7c986df74c645c0ac54639741c90a557 |
+	| L     | forge             | 14.23.5.2860  | forge-1.12.2-14.23.5.2860.jar       | e3c3d50c7c986df74c645c0ac54639741c90a557 |
+	| L     | create            | 26w04a        | create-26w04a.jar                   | None                                     |
+	| L     | sexmod            | 1.1.0         | Fapcraft_1.12.2_v1.1.jar            | None                                     |
+	| L     | geckolib3         | 3.0.30        | Fapcraft_1.12.2_v1.1.jar            | None                                     |
+	| L     | jei               | 4.16.1.1013   | jei_1.12.2-4.16.1.1013.jar          | None                                     |
+	| L     | mca               | 6.1.0         | MCA-Español-1.12.2.jar              | None                                     |
+	| L     | melonlib          | 1.11.3        | melonlib-1.12.2-1.11.3.jar          | None                                     |
+	| L     | mysticallib       | 1.12.2-1.13.0 | mysticallib-1.12.2-1.13.0.jar       | None                                     |
+	| L     | reccomplex        | 1.4.8.6       | RecurrentComplex-1.4.8.6.jar        | None                                     |
+	| L     | travelersbackpack | 1.0.35        | TravelersBackpack-1.12.2-1.0.35.jar | None                                     |
+	| L     | traverse          | 1.6.0         | Traverse-1.12.2-1.6.0-69.jar        | None                                     |
+
+	Loaded coremods (and transformers): 
+	Profiler Position: N/A (disabled)
+	Is Modded: Definitely; Server brand changed to 'fml,forge'
+	Type: Dedicated Server (map_server.txt)

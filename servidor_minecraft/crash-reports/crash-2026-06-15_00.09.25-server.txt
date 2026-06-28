@@ -1,0 +1,122 @@
+---- Minecraft Crash Report ----
+// My bad.
+
+Time: 6/15/26 12:09 AM
+Description: Ticking entity
+
+java.lang.NullPointerException: Ticking entity
+	at com.trolmastercard.sexmod.h8.lambda$static$1(h8.java)
+	at com.trolmastercard.sexmod.h8.b(h8.java)
+	at com.trolmastercard.sexmod.f_.I(f_.java)
+	at com.trolmastercard.sexmod.f_.ao(f_.java)
+	at com.trolmastercard.sexmod.f_.an(f_.java)
+	at com.trolmastercard.sexmod.f_.func_70619_bc(f_.java)
+	at net.minecraft.entity.EntityLiving.func_70626_be(EntityLiving.java:769)
+	at net.minecraft.entity.EntityLivingBase.func_70636_d(EntityLivingBase.java:2359)
+	at net.minecraft.entity.EntityLiving.func_70636_d(EntityLiving.java:577)
+	at net.minecraft.entity.EntityLivingBase.func_70071_h_(EntityLivingBase.java:2179)
+	at net.minecraft.entity.EntityLiving.func_70071_h_(EntityLiving.java:295)
+	at com.trolmastercard.sexmod.em.func_70071_h_(em.java)
+	at com.trolmastercard.sexmod.f_.func_70071_h_(f_.java)
+	at net.minecraft.world.World.func_72866_a(World.java:1996)
+	at net.minecraft.world.WorldServer.func_72866_a(WorldServer.java:832)
+	at net.minecraft.world.World.func_72870_g(World.java:1958)
+	at net.minecraft.world.World.func_72939_s(World.java:1762)
+	at net.minecraft.world.WorldServer.func_72939_s(WorldServer.java:613)
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:767)
+	at net.minecraft.server.dedicated.DedicatedServer.func_71190_q(DedicatedServer.java:397)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:668)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:526)
+	at java.lang.Thread.run(Thread.java:750)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at com.trolmastercard.sexmod.h8.lambda$static$1(h8.java)
+	at com.trolmastercard.sexmod.h8.b(h8.java)
+	at com.trolmastercard.sexmod.f_.I(f_.java)
+	at com.trolmastercard.sexmod.f_.ao(f_.java)
+	at com.trolmastercard.sexmod.f_.an(f_.java)
+	at com.trolmastercard.sexmod.f_.func_70619_bc(f_.java)
+	at net.minecraft.entity.EntityLiving.func_70626_be(EntityLiving.java:769)
+	at net.minecraft.entity.EntityLivingBase.func_70636_d(EntityLivingBase.java:2359)
+	at net.minecraft.entity.EntityLiving.func_70636_d(EntityLiving.java:577)
+	at net.minecraft.entity.EntityLivingBase.func_70071_h_(EntityLivingBase.java:2179)
+	at net.minecraft.entity.EntityLiving.func_70071_h_(EntityLiving.java:295)
+	at com.trolmastercard.sexmod.em.func_70071_h_(em.java)
+	at com.trolmastercard.sexmod.f_.func_70071_h_(f_.java)
+	at net.minecraft.world.World.func_72866_a(World.java:1996)
+	at net.minecraft.world.WorldServer.func_72866_a(WorldServer.java:832)
+	at net.minecraft.world.World.func_72870_g(World.java:1958)
+
+-- Entity being ticked --
+Details:
+	Entity Type: sexmod:galath (com.trolmastercard.sexmod.f_)
+	Entity ID: 663777
+	Entity Name: Galath
+	Entity's Exact location: -392.89, 68.00, 850.12
+	Entity's Block location: World: (-393,68,850), Chunk: (at 7,4,2 in -25,53; contains blocks -400,0,848 to -385,255,863), Region: (-1,1; contains chunks -32,32 to -1,63, blocks -512,0,512 to -1,255,1023)
+	Entity's Momentum: 0.00, 0.00, 0.00
+	Entity's Passengers: []
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: null
+Stacktrace:
+	at net.minecraft.world.World.func_72939_s(World.java:1762)
+	at net.minecraft.world.WorldServer.func_72939_s(WorldServer.java:613)
+
+-- Affected level --
+Details:
+	Level name: world
+	All players: 2 total; [EntityPlayerMP['RompOrTos'/21032, l='world', x=-383.05, y=74.22, z=836.45], EntityPlayerMP['Tumamitafc'/393619, l='world', x=-376.71, y=67.00, z=831.34]]
+	Chunk stats: ServerChunkCache: 741 Drop: 0
+	Level seed: 3437164
+	Level generator: ID 06 - BIOMESOP, ver 0. Features enabled: true
+	Level generator options: 
+	Level spawn location: World: (248,64,256), Chunk: (at 8,4,0 in 15,16; contains blocks 240,0,256 to 255,255,271), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 558429 game time, 8827 day time
+	Level dimension: 0
+	Level storage version: 0x04ABD - Anvil
+	Level weather: Rain time: 14265 (now: true), thunder time: 22986 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:767)
+	at net.minecraft.server.dedicated.DedicatedServer.func_71190_q(DedicatedServer.java:397)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:668)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:526)
+	at java.lang.Thread.run(Thread.java:750)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Linux (amd64) version 6.8.0-1052-azure
+	Java Version: 1.8.0_482, Private Build
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Private Build
+	Memory: 4321330360 bytes (4121 MB) / 7741636608 bytes (7383 MB) up to 11453595648 bytes (10923 MB)
+	JVM Flags: 2 total; -Xms2G -Xmx12G
+	IntCache: cache: 0, tcache: 0, allocated: 4, tallocated: 105
+	FML: MCP 9.42 Powered by Forge 14.23.5.2860 12 mods loaded, 12 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State  | ID                | Version       | Source                                        | Signature                                |
+	|:------ |:----------------- |:------------- |:--------------------------------------------- |:---------------------------------------- |
+	| LCHIJA | minecraft         | 1.12.2        | minecraft.jar                                 | None                                     |
+	| LCHIJA | mcp               | 9.42          | minecraft.jar                                 | None                                     |
+	| LCHIJA | FML               | 8.0.99.99     | forge-1.12.2-14.23.5.2860.jar                 | e3c3d50c7c986df74c645c0ac54639741c90a557 |
+	| LCHIJA | forge             | 14.23.5.2860  | forge-1.12.2-14.23.5.2860.jar                 | e3c3d50c7c986df74c645c0ac54639741c90a557 |
+	| LCHIJA | biomesoplenty     | 7.0.1.2445    | BiomesOPlenty-1.12.2-7.0.1.2445-universal.jar | None                                     |
+	| LCHIJA | sexmod            | 1.1.0         | Fapcraft_1.12.2_v1.1.jar                      | None                                     |
+	| LCHIJA | geckolib3         | 3.0.30        | Fapcraft_1.12.2_v1.1.jar                      | None                                     |
+	| LCHIJA | glitchcore        | @MOD_VERSION@ | GlitchCore-1.12.2-1.0.0-universal.jar         | None                                     |
+	| LCHIJA | jei               | 4.16.1.1013   | jei_1.12.2-4.16.1.1013.jar                    | None                                     |
+	| LCHIJA | mca               | 6.1.0         | MCA-Español-1.12.2.jar                        | None                                     |
+	| LCHIJA | roguelike         | 1.8.0         | RoguelikeDungeons-1.12.2-1.8.0.jar            | None                                     |
+	| LCHIJA | travelersbackpack | 1.0.35        | TravelersBackpack-1.12.2-1.0.35.jar           | None                                     |
+
+	Loaded coremods (and transformers): 
+	Profiler Position: N/A (disabled)
+	Player Count: 2 / 20; [EntityPlayerMP['RompOrTos'/21032, l='world', x=-383.05, y=74.22, z=836.45], EntityPlayerMP['Tumamitafc'/393619, l='world', x=-376.71, y=67.00, z=831.34]]
+	Is Modded: Definitely; Server brand changed to 'fml,forge'
+	Type: Dedicated Server (map_server.txt)
